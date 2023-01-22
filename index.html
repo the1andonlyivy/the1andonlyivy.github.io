@@ -9,50 +9,257 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial;
+  font-family: Georgia;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #EDC7B7;
+  color: #124C69;
+  font-size: 10px;
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
-  color: white;
+  background-color: #124C69;
+  color: #EEE2DC;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 16px;
   font-size: 17px;
   width: 25%;
+  font-family: Luminari;
 }
 
 .tablink:hover {
-  background-color: #777;
+  background-color: #EDC7B7;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
+  color: #124C69;
   display: none;
-  padding: 100px 20px;
+  padding: 50px 20px;
   height: 100%;
 }
 
-#Home {background-color: red;}
-#News {background-color: green;}
-#Contact {background-color: blue;}
-#About {background-color: orange;}
+#About{background-color: #EDC787;}
+#News {background-color: #EDC7B7;}
+#Contact {background-color: #EDC7B7;}
+#About {background-color: #EDC7B7;}
 </style>
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+<div class="header">
+  <p> :) <p>
+</div>
+
+<button class="tablink" onclick="openPage('About', this, '#AC3B61')">About</button>
+<button class="tablink" onclick="openPage('News', this, '#AC3B61')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, '#AC3B61')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, '#AC3B61')">About</button>
+
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p> 15 year old living in Princeton, New Jersey. Originally from Connecticut & Shanghai. Here are my socials: </p>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #124C69;
+  color: #EDC7B7;
+}
+
+.fa-youtube {
+  background: #AC3B61;
+  color: #EDC7B7;
+}
+
+.fa-instagram {
+  background: #124C69;
+  color: #EDC7B7;
+}
+
+</style>
+</head>
+<body>
+
+<a href="https://twitter.com/IvyHu80280480" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com/channel/UCnTX9HNFqo938D-cC0CvRjQ" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/_ivyhu/" class="fa fa-instagram"></a>
+      
+</body>
+</html> 
+
+<p> And here's a calendar (I'll add my schedule soon!): <p>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Georgia}
+
+.month {
+  padding: 10px 10px;
+  width: 100%;
+  background: #AC3B61;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: #EEE2DC;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #124C69;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #EEE2DC;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #EEE2DC;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size:12px;
+  color: #AC3861;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #124C69;
+  color: white !important
+}
+
+.days li:hover {
+  background-color: #EDC7B7;
+}
+
+</style>
+</head>
+<body>
+
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      January<br>
+      <span style="font-size:18px">2023</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li><span class="active">21</span></li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+</body>
+</html>
+
+
 </div>
 
 <div id="News" class="tabcontent">
@@ -88,6 +295,6 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-   
+
 </body>
 </html> 

@@ -47,8 +47,8 @@ body, html {
 }
 
 #About{background-color: #EDC787;}
-#News {background-color: #EDC7B7;}
-#Contact {background-color: #EDC7B7;}
+#Blog {background-color: #EDC7B7;}
+#Gallery {background-color: #EDC7B7;}
 #About {background-color: #EDC7B7;}
 </style>
 </head>
@@ -60,8 +60,8 @@ body, html {
 </div>
 
 <button class="tablink" onclick="openPage('About', this, '#AC3B61')">About</button>
-<button class="tablink" onclick="openPage('News', this, '#AC3B61')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, '#AC3B61')">Contact</button>
+<button class="tablink" onclick="openPage('Blog', this, '#AC3B61')" id="defaultOpen">Blog</button>
+<button class="tablink" onclick="openPage('Gallery', this, '#AC3B61')">Gallery</button>
 <button class="tablink" onclick="openPage('About', this, '#AC3B61')">About</button>
 
 
@@ -262,14 +262,213 @@ body {font-family: Georgia}
 
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
+<div id="Blog" class="tabcontent">
+  <h3>Blog</h3>
+  <p>Stay tuned for updates!</p> 
 </div>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
+<div id="Gallery" class="tabcontent">
+  <h3>Gallery</h3>
+  <p>My life, in pictures :)</p>
+  
+  <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Georgia;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  width: 40%
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #EEE2DC;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #EEE2DC;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: #EEE2DC;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img6.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Danbury Mall">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sunset over the Tappan Zee">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Ridgefield Library">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img4.jpg" style="width:100%" onclick="currentSlide(4)" alt="New York, near Macy's">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Hartford Lights">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img6.jpg" style="width:100%" onclick="currentSlide(6)" alt="NYC at Night">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
+
+  
 </div>
 
 <div id="About" class="tabcontent">
